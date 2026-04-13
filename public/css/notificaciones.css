@@ -1,0 +1,11 @@
+.container-notificaciones-usuarios {
+    width: 100%;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    padding: 20px;
+    border: solid 2px;
+}
+
+.link-notificacion {
+    text-decoration: none;
+}

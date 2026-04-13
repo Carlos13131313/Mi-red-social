@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containerBoard {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+
+.relojreset {
+    position: absolute;
+    top: 12vh;
+    left: 20px;
+    width: 70px;
+    height: 30px;
+    background-color: #45a049;
+    color: white;
+    border: 2px solid #000000;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+.reloj {
+    position: absolute;
+    text-align: center;
+    font-size: 6.5em;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    width: 450px;
+    height: 120px;
+    backdrop-filter: blur(3px);
+    cursor: move;
+    user-select: none;
+}
+
+.contenedor_de_publicaciones {
+    position: absolute;
+    top: 12vh;
+    right: 45px;
+    width: 430px;
+    height: 270px;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    border: 2px solid rgba(255, 255, 255, 0.123);
+}
+
+.contenedor_de_publicaciones .navigation {
+    /* border: 3px solid rgb(255, 255, 255); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------------------------------------- contenedor de iconos de Texto, Audio y Video ------------------------- */
+
+.navigation ul {
+    /* border: 2px solid black; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+
+/* --------------------------------------- iconos de Texto, Audio y Video --------------------------------------- */
+
+.navigation ul li {
+    /* border: 2px solid white; */
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4.1%;
+}
+
+.navigation ul li a {
+    /* border: 2px solid rgb(255, 0, 0); */
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    color: #000000;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation ul li a .icon {
+    /* border: 2px solid rgb(0, 255, 26); */
+    position: absolute;
+    top: -2px;
+    height: 25px;
+    cursor: pointer;
+    color: #000000;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+
+/* --------------------------------------- contenedor publicacion de texto y botones --------------------------------------- */
+
+#texto-pub {
+    /* border: 2px solid #ff0000; */
+    position: absolute;
+    top: -217px;
+    left: 0px;
+    width: 100%;
+    height: 215px;
+    z-index: 1;
+    padding: 10px;
+}
+
+.texto-pub .form-publicar-texto {
+    /* border: 2px solid #00a811; */
+    width: 100%;
+    height: 100%;
+}
+
+.form-publicar-texto .area-de-texto {
+    width: 100%;
+    height: 150px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 12px;
+    resize: none;
+}
+
+.form-publicar-texto .para-cargar-imagen {
+    /* border: 2px solid #d5ff01; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.para-cargar-imagen .imagen-public {
+    position: absolute;
+}
+
+.para-cargar-imagen .btn-Foto,
+.para-cargar-imagen .btn-publicar {
+    background-color: white;
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.para-cargar-imagen .btn-Foto:hover,
+.para-cargar-imagen .btn-publicar:hover {
+    background-color: #cfcfcf;
+}
+
+.para-cargar-imagen .input-file input[type="file"] {
+    display: none;
+}
+
+
+/* --------------------------------------- contenedor publicacion de audio y botones --------------------------------------- */
+
+#audio-pub {
+    /* border: 2px solid #ff0000; */
+    position: absolute;
+    top: -217px;
+    left: 0px;
+    width: 100%;
+    height: 215px;
+    z-index: 1;
+    padding: 10px;
+}
+
+/* -------- muestra este mensaje cuando se publica el audio --------- */
+#audio-pub #mensaje-audio {
+    position: inherit;
+    backdrop-filter: blur(5px);
+    bottom: 50%;
+    right: 0px;
+    left: 0px;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.mensaje-exito {
+    background-color: rgba(255, 255, 255, 0.822);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.fade-out-audio {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+
+    transition: opacity 0.5s ease;
+}
+
+/* --- mensaje de error cuando no se puede publicar el audio y cuando (por alguna razon) no se cumple el tiempo minimo de grabacion --- */
+.mensaje-error-audio {
+    background-color: rgba(255, 255, 255, 0.822);
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.audio-upload .form-publicar-audio {
+    /* border: 2px solid #ff0000;  */
+    width: 100%;
+    height: 100%;
+}
+
+.form-publicar-audio .contenido-audio-botones {
+    /* border: 2px solid #00a811;  */
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 6px;
+}
+
+/* controles de grabacion de audio */
+.contenido-audio-botones .botones-controles {
+    /* border: 1px solid #eeff00; */
+
+    width: 30%;
+    height: 100%;
+    padding-right: 10px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.botones-controles p {
+    /* border: 2px solid #00ff37; */
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.botones-controles p button {
+    background-color: white;
+    border-radius: 20px;
+    height: 25px;
+    width: 100%;
+    border: none;
+}
+
+.contenido-audio-botones #recording-timer {
+    position: absolute;
+    padding: 10px;
+    color: white;
+
+    top: 5px;
+    left: 130px;
+}
+
+/*contenedor que muestra una animacion de audio*/
+#visualizer {
+    /* border: 2px solid #ff0000; */
+
+    height: 100%;
+    width: 70%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #000000;
+    border-radius: 10px;
+    outline: none;
+}
+
+.alerta {
+    background-color: #222327;
+    position: absolute;
+    top: 30px;
+    left: 140px;
+    width: 250px;
+    height: 150px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.alerta h2 {
+    /* border: 2px solid white; */
+    margin: 15px 0;
+    /* Ajustado para centrar verticalmente */
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* Cambiado de font: bold; a font-weight: bold; */
+}
+
+.alerta .botones-eliminar-audio {
+    /* border: 2px solid white; */
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    /* Espacio entre el h2 y los botones */
+}
+
+.alerta #botonSi,
+.alerta #botonNo {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.alerta #botonSi:hover,
+.alerta #botonNo:hover {
+    background-color: #8f8f8f;
+}
+
+.audio-upload {
+    /* border: 2px solid #fc0000; */
+    margin-left: 10px;
+}
+
+.upload-audio-file {
+    /* border: 2px solid #000000; */
+}
+
+.upload-audio-file .input-file-audio input[type="file"] {
+    position: absolute;
+}
+
+.upload-audio-file .multi,
+.audio-upload .publicar-audio {
+    background-color: white;
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.upload-audio-file .multi:hover {
+    background-color: #cfcfcf;
+}
+
+.audio-upload .publicar-audio:hover {
+    background-color: #cfcfcf;
+}
+
+
+/* --------------------------------------- contenedor publicacion de video y botones --------------------------------------- */
+
+#video-pub {
+    position: absolute;
+    top: -217px;
+    left: 0px;
+    width: 100%;
+    height: 215px;
+    z-index: 1;
+    padding: 10px;
+}
+
+#video-pub input {
+    width: 100%;
+    height: 150px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 12px;
+    resize: none;
+}
+
+
+
+
+.upload-audio-file .multi {
+    background-color: white;
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.upload-audio-file .multi:hover {
+    background-color: #cfcfcf;
+}
+
+.indicator {
+    border: 2px solid #000000;
+    position: absolute;
+    bottom: 10px;
+    width: 32px;
+    left: 29%;
+    transition: 0.5s;
+
+    /* bottom: 10px;
+    left: 27.5%;
+    width: 32px;
+    border-radius: 0%;
+    border: 2px solid #000000;
+    transition: 0.5s; */
+}
+
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.barra-division {
+    position: absolute;
+    width: 400px;
+    top: -5px;
+    border: 2px solid rgba(255, 255, 255, 0.192);
+}

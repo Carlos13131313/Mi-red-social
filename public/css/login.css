@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+
+.contenedor-centro {
+    width: 400px;
+    height: 400px;
+    border: 2px solid #ffffff2f;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Titulo dentro del cuadro */
+h2 {
+    font-size: 2.3rem;
+    color: #fff;
+    text-align: center;
+}
+
+
+.input-contenedor {
+    position: relative;
+    margin: 30px;
+    width: 300px;
+    border-bottom: 2px solid;
+    color: #fff;
+}
+
+
+/**
+*Texto (correo electronico y contraseña).
+*/
+.input-contenedor label {
+    position: absolute;
+    top: 25px;
+    left: 6px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .2s;
+    font-weight: bold;
+}
+
+/** Movimiento/desplazamiento del texto Email y Contraseña **/
+input:valid~label,
+input:focus~label {
+    top: -10px;
+}
+
+.input-contenedor input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 35px 0 5px;
+    color: #fff;
+    padding-top: 10px; /* Ajusta el relleno superior para subir el texto */
+    padding-bottom: 10px; /* Ajusta el relleno inferior para subir el texto */
+    padding-left: 6px;;
+}
+
+/** Iconos de Email y Contraseña.       PENDIENTE
+.input-contenedor i {
+    position: absolute;
+    color: #fff;
+    font-size: 1.6rem;
+    top: 60px;
+    right: 8px;
+} */
+
+
+/**
+*Opcion para recordar los datos
+*/
+.olvidar {
+    margin: -15px 0 15px;
+    font-size: 1em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.olvidar Label input {
+    margin: 3px;
+}
+
+.olvidar label a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 1em;
+}
+
+/**
+*Boton para iniciar sesion.
+*/
+.boton {
+    width: 100%;
+    height: 40px;
+    border-radius: 45px;
+    background: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+.boton:hover {
+    opacity: 0.9;
+}
+
+/** Aviso cuando el correo o contraseña no son correctos */
+.alert-danger {
+    position: absolute;
+    width: 360px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    user-select: none;
+}
+
+/** Aviso cuando el registro se completo */
+.alert-succes {
+    position: absolute;
+    width: 360px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    user-select: none;
+    background-color: hsl(133, 100%, 84%);
+}
+
+button:focus {
+    outline: none;
+}
+
+/** texto que invita a crear una cuenta (envia al formulario de registro) */
+.registrar {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.registrar p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: .3s;
+
+}
+
+.registrar p a:hover {
+    text-decoration: underline;
+    Color: black;
+}

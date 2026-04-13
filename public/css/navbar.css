@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    position: absolute;
+    width: calc(100% - 17px); /* Reducir el ancho para dejar espacio para la barra de desplazamiento */
+    height: 7vh;
+    left: 0;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(3px);
+    z-index: 999; /* Asegura que el navbar esté por encima del contenido */
+}
+
+.circulo {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlace {
+    position: relative;
+}
+
+.Logo {
+    height: 32px;
+    width: 32px;
+    border-radius: 50px;
+    border: 3px solid #000000;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0px 40px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tipe-form {
+    display: flex;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+
+.tipe-form #text {
+    resize: none;
+    color: #000000;
+    font: bold;
+    font-size: 1.1rem;
+    padding-left: 20px;
+    height: 40px;
+}
+
+.tipe-form input::placeholder {
+    resize: none;
+    color: #545454;
+    font: bold;
+    font-size: 1.1rem;
+    position: relative;
+    left: 0px;
+    padding: none;
+    user-select: none;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.form-style {
+    outline: none;
+    padding: 8px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 14px ;
+}
+
+.tipe-form .btn-form {
+    border: none;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    color: #8a8a8a;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    height: 40px;
+    
+}
+
+.btn-form i {
+    font-size: 20px; /* Modifica el tamaño del icono */
+    font-weight: 20px; /* Modifica el grosor del icono */
+}
+
+/** contenido de iconos **/
+.collapsenavbar-collapse {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collapsenavbar-collapse ul {
+    margin-bottom: 0;
+    display: flex;
+}
+
+.collapsenavbar-collapse a {
+    margin: 1.7rem;
+}
+
+.collapsenavbar-collapse i {
+    font-size: 19px;
+    font: bold;
+    color: black;
+}
+
+/* icono de campana (notificaciones) */
+.collapsenavbar-collapse .bg-notificacion {
+    float: right;
+    background-color: red;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    border-radius: 10px;
+    height: 20px;
+}
+
+/* Define la animación de temblor con giro */
+@keyframes shake {
+    0% { transform: rotate(-5deg); } /* Ángulo de rotación más pronunciado */
+    50% { transform: rotate(-5deg); } /* Ángulo de rotación más pronunciado */
+    75% { transform: rotate(5deg); } /* Ángulo de rotación más pronunciado */
+    100% { transform: rotate(0); }
+}
+
+.big .fa-home:hover {
+    animation: shake 0.2s ease infinite; /* Aplica la animación de temblor */
+}
+
+.big .fa-user:hover {
+    animation: shake 0.2s ease infinite; /* Aplica la animación de temblor */
+}
+
+.big .fa-envelope:hover {
+    animation: shake 0.2s ease infinite; /* Aplica la animación de temblor */
+}
+
+.big .fa-bell:hover {
+    animation: shake 0.2s ease infinite; /* Aplica la animación de temblor */
+}
+
+/* Detiene la animación cuando el mouse deja de estar sobre los iconos */
+.big .fa-home, .big .fa-user, .big .fa-envelope, .big .fa-bell {
+    transition: transform 0.2s ease; /* Agrega una transición suave */
+}
+
+.big .fa-home:hover, .big .fa-user:hover, .big .fa-envelope:hover, .big .fa-bell:hover {
+    animation-play-state: running; /* Inicia la animación cuando el mouse pasa por encima */
+}
+
+/** perfil e imagen del perfil **/
+/** contenedor **/
+.dropdown {
+    cursor: pointer;
+    /* border: 2px solid rgb(255, 255, 255); */
+    padding: 5px 21px;
+    border-radius: 20px;
+    font: bold;
+    display: flex;
+}
+
+.btn-radio.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown .img-perfil {
+    display: block;
+    width: 40px; /* Ancho deseado */
+    height: 40px; /* Alto deseado */
+    object-fit: cover;
+    border-radius: 50%; /* Para que la imagen tenga forma de círculo */
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+    top: 55px;
+    left: -70px;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 0%, 0.348);
+    border: 2px solid rgba(0, 0, 0, 0.69);
+    padding: 10px;
+    margin-top: 0;
+}
+
+.dropdown-menu a {
+    user-select: none;
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    margin: 0;
+    color: #ffffff !important;
+}
+
+.dropdown a:hover {
+    background-color: rgb(138, 138, 138);
+    border-radius: 5px;
+}
+

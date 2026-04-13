@@ -1,0 +1,600 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container5 {
+    /* border: 3px solid rgb(255, 255, 255); */
+    width: 100%;
+    height: 100vh;
+}
+
+/*  ----------------------------------------------------------------------------- */
+/* Columna de Timeline principal */
+.container5 .columna-home {
+    /* border: 3px solid black; */
+    position: relative;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/* ------------------------------------------- Columna laterale Derecha -----------------------------------------*/
+.container5 .col-md-3:first-of-type {
+    left: 26px;
+    top: 15px;
+}
+
+.container5 .col-md-3:last-of-type {
+    right: 43px;
+    top: 15px;
+}
+
+.columna-home .container {
+    /* border: 3px solid black; */
+    height: 100%;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+/* contenedor para hacer publicaciones */
+.container-style-main-home {
+    backdrop-filter: blur(3px);
+    border: 2px solid rgba(255, 255, 255, 0.056);
+    border-radius: 20px;
+    margin-top: 8vh;
+}
+
+.container-usuario-publicar {
+    padding: 15px 15px 15px;
+    display: flex;
+}
+
+
+.container-usuario-publicar a {
+    height: 53px;
+}
+
+/* Imagen de perfil en la seccion para publicar  */
+.container-usuario-publicar .image-border {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    /* Escala la imagen manteniendo las proporciones */
+    object-fit: cover;
+}
+
+.form-publicar {
+    left: 60px;
+    width: 100%;
+}
+
+.form-publicar .published {
+    width: 100%;
+    height: 100px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font: bold;
+    padding: 8px;
+    border-radius: 12px;
+    resize: none;
+}
+
+.form-publicar .image-upload-file {
+    display: flex;
+    justify-content: space-between;
+}
+
+/** contenedor del img class="image-public" con PHP */
+.image-public {
+    position: absolute;
+}
+
+.image-upload-file .btn-subirFoto {
+    padding: 5px 10px;
+    background-color: white;
+    border: none;
+    font-size: 17px;
+    font: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.image-upload-file .btn-subirFoto:hover {
+    background-color: #cfcfcf;
+}
+
+.input-file input[type="file"] {
+    display: none;
+}
+
+.image-upload-file .btn-publi {
+    padding: 5px 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-size: 17px;
+    font: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.image-upload-file .btn-publi:hover {
+    background-color: #cfcfcf;
+}
+
+.container-style-main2 {
+    /*  border: 3px solid black; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.perfil-usuario-main {
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    /* Centra horizontalmente el contenido */
+}
+
+/* imagen de perfil */
+.perfil-usuario-main .image-border-usuario {
+    /* Para que la imagen se comporte como un bloque en línea */
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    /* Para que la imagen tenga forma de círculo */
+    border-radius: 90px;
+    /* Escala la imagen manteniendo las proporciones */
+    object-fit: cover;
+}
+
+.photo-separation {
+    height: 20px;
+}
+
+.perfil-usuario-main .perfil-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.perfil-link .nombre-perfil {
+    /* border: 3px solid black; */
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+
+}
+
+/* Seccion donde muestra los likes y los comentarios */
+.tabla-estadisticas {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0;
+}
+
+.tabla-estadisticas a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+/*  -------------------------------------- Publicaciones echas por los usuario (texto e/o imagen y audios)--------------------------------------- */
+
+/* ------ Publicaciones de texto e/o imagen ------ */
+.container-usuarios-publicaciones {
+    border: 3px solid white;
+
+    /* border: 2px solid rgba(255, 255, 255, 0.056); */
+    padding: 15px 15px 15px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    backdrop-filter: blur(3px);
+    border-radius: 25px;
+    height: max-content;
+
+}
+
+.acciones-publicacion-usuario {
+    float: right;
+    right: 15px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+.acciones-publicacion-usuario .fa {}
+
+.container-usuarios-publicaciones .usuarios-publicaciones-top {
+    /* border: 3px solid rgb(255, 0, 0); */
+    display: flex;
+}
+
+.container-usuarios-publicaciones .informacion-usuario-publico {
+    /* border: 3px solid rgb(255, 255, 255); */
+}
+
+.informacion-usuario-publico .mb-1 {
+    text-align: left;
+}
+
+.container-usuarios-publicaciones .image-border-pub {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.contenido-publicacion-usuario {
+    width: 100%;
+    height: max-content;
+
+    margin-top: 10px;
+    /* border: 3px solid rgb(81, 255, 0); */
+}
+
+.contenido-publicacion-usuario .imagen-publicacion-usuario {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+
+    /* border: 3px solid rgb(255, 0, 0); */
+}
+
+.acciones-usuario-publicar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acciones-usuario-publicar a {
+    text-decoration: none;
+    color: #e5e5e5;
+}
+
+.acciones-usuario-publicar .like-active {
+    color: #ffffff !important;
+}
+
+.acciones-usuario-publicar .like-active:hover {
+    color: 926dde;
+}
+
+.acciones-usuario-publicar i {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.acciones-usuario-publicar span {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+/* Formulario para hacer comentarios */
+.formulario-comentarios {
+    /* border: 3px solid rgb(255, 255, 255); */
+    display: flex;
+}
+
+.acciones-formulario-comentario {
+    width: 100%;
+}
+
+.acciones-formulario-comentario form {}
+
+.formulario-comentarios img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.acciones-formulario-comentario form .form-comentario-usuario {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font: bold;
+    padding: 8px;
+    border-radius: 15px;
+    resize: none;
+}
+
+.acciones-formulario-comentario .btn-comentario-container {
+    /* border: 3px solid rgb(0, 0, 0); */
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.btn-comentario-container .btn-purple {
+    padding: 5px 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-size: 17px;
+    font: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Aqui se mostraran los comentarios */
+.separador-comentarios {
+    border: 1px solid rgba(255, 255, 255, 0.348);
+    width: 100%;
+}
+
+.container-contenido-comentarios {
+    /* border: 3px solid rgb(0, 0, 0); */
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+
+    /* border: 3px solid rgb(0, 0, 0); */
+}
+
+.container-contenido-comentarios img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.contenido-comentario-usuario {
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  -------------------------------------- Publicaciones echas por los usuario (Audios)--------------------------------------- */
+/* ------ Publicaciones de audio ------ */
+.container-usuarios-publicaciones-audio {
+    border: 3px solid black;
+
+    /* border: 2px solid rgba(255, 255, 255, 0.056); */
+    padding: 15px 15px 15px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    backdrop-filter: blur(3px);
+    border-radius: 25px;
+    height: max-content;
+
+}
+
+.acciones-publicacion-usuario-audio {
+    float: right;
+    right: 15px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+.acciones-publicacion-usuario-audio .fa {}
+
+.container-usuarios-publicaciones-audio .usuarios-publicaciones-audio-top {
+    /* border: 3px solid rgb(255, 0, 0); */
+    display: flex;
+}
+
+.container-usuarios-publicaciones-audio .informacion-usuario-audio-publico {
+    /* border: 3px solid rgb(255, 255, 255); */
+    text-align: center;
+    height: 30px;
+}
+
+/* .informacion-usuario-audio-publico .mb-0 {
+    text-align: left;
+} */
+
+.container-usuarios-publicaciones-audio .image-border-pub {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.contenido-publicacion-audio-usuario {
+    width: 100%;
+    height: auto;
+
+    justify-content: center;
+    margin-top: 10px;
+    /* border: 3px solid rgb(81, 255, 0); */
+}
+
+.contenido-publicacion-audio-usuario audio {
+    width: 100%;
+}
+
+/* ---------------------------------------------- barra separadora <hr> ------------------------------------------------ */
+
+.acciones-audio-usuario-publicar {
+    /* border: 3px solid rgb(81, 255, 0); */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acciones-audio-usuario-publicar a {
+    text-decoration: none;
+    color: #e5e5e5;
+}
+
+.acciones-audio-usuario-publicar .like-active {
+    color: #ffffff !important;
+}
+
+.acciones-audio-usuario-publicar .like-active:hover {
+    color: 926dde;
+}
+
+.acciones-audio-usuario-publicar i {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.acciones-audio-usuario-publicar span {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+/* ---------------------------------------------- barra separadora <hr>------------------------------------------------ */
+
+/* Campo para comentar */
+.formulario-comentarios-audio {
+    /* border: 3px solid rgb(255, 255, 255); */
+    display: flex;
+}
+
+.acciones-formulario-comentario-audio {
+    /* border: 3px solid rgb(81, 255, 0); */
+    width: 100%;
+}
+
+.acciones-formulario-comentario-audio form {}
+
+.formulario-comentarios-audio img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.acciones-formulario-comentario-audio form .form-comentario-usuario {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font: bold;
+    padding: 8px;
+    border-radius: 15px;
+    resize: none;
+}
+
+.acciones-formulario-comentario-audio .btn-comentario-container-audio {
+    /* border: 3px solid rgb(0, 0, 0); */
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.btn-comentario-container-audio .btn-purple {
+    padding: 5px 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-size: 17px;
+    font: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Aqui se mostraran los comentarios */
+.separador-comentarios-del-audio {
+    border: 1px solid rgba(255, 255, 255, 0.348);
+    width: 100%;
+}
+
+.container-contenido-comentarios-audio {
+    /* border: 3px solid rgb(0, 0, 0); */
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+
+    /* border: 3px solid rgb(0, 0, 0); */
+}
+
+.container-contenido-comentarios-audio img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.contenido-comentario-usuario-audio {
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------- Columna laterale Izquierda -----------------------------------------*/
+.container5 .col-md-3 {
+    /* border: 3px solid rgb(255, 3, 3); */
+    /* background-color: rgba(255, 255, 255, 0.167); */
+    border: 2px solid rgba(255, 255, 255, 0.056);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    position: fixed;
+    margin-top: 13vh;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}

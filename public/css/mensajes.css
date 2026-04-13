@@ -1,0 +1,28 @@
+.container-notificaciones-usuario {
+    border: solid 3px black;
+}
+
+/** .container-notificaciones-usuario .row {
+    border: solid 3px white;
+} */
+
+.container-notificaciones-usuario .col-md-6 {
+    border: solid 3px red;
+}
+
+.col-md-6 .texto-mensajeria-del-usuario {
+    border: solid 3px rgb(0, 255, 0);
+}
+
+.texto-mensajeria-del-usuario .form-group {
+    border: solid 3px blueviolet;
+}
+
+.form-group label {
+    border: solid 3px black;
+}
+
+.form-group .form-control {
+    border: solid 3px rgb(238, 255, 0);
+}
+

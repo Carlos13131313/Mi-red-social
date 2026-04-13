@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* todo el contenido menos el navbar */
+.perfil-container-usuario {
+    border: 3px solid black;
+    position: relative; /* Cambia la posición a relativa */
+    width: 100%;
+    height: 100vh; /* 90% del alto de la ventana del navegador */
+    overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Imagen de portada en el perfil del usuario */
+.imagen-header-perfil-usuario {
+    width: 100%;
+    border: 3px solid rgb(255, 255, 255);
+    height: 350px;
+    backdrop-filter: blur(3px);
+}
+
+.container-perfil {
+    border: 3px solid rgb(0, 255, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del col-md-4 y col-md-6 */
+.conteiner-perfil {
+    width: 100%;
+    border: 3px solid rgb(248, 0, 252);
+}
+
+/*  ----------------------------------------------------------------------------- */
+/* datos-perfil-usuario */
+.col-md-4 {
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.167);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    padding: 25px;
+    height: 350px;
+    width: 150px;
+    text-align: center;
+}
+
+/* Imagen de perfil */
+.imagen-perfil-usuario {
+    top: -70px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Para que la imagen tenga forma de círculo */
+    object-fit: cover; /* Escala la imagen manteniendo las proporciones */
+}
+
+.imagen-perfil-cambiar {
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.fasfa-camera {
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.photo-separation {
+    /* border: 3px solid rgb(9, 1, 1); */
+}
+
+.datos-personales-usuario {
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.datos-personales-usuario h3 {
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.datos-personales-usuario .descripcion-usuario {
+    border: 3px solid rgb(255, 0, 221);
+}
+
+/* Icono para cambiar la foto de perfil */
+.col-md-4 .fotos {
+    /* border: 2px solid white; */
+    width: 50px;
+    position: absolute;
+    top: 35px;
+    left: 35%;
+}
+
+.fotos .fas {
+    cursor: pointer;
+    /* border: 2px solid rgb(255, 0, 0); */
+}
+
+.fotos .input-file {
+    /* border: 2px solid rgb(0, 0, 0); */
+    height: 50px;
+}
+
+/*  ----------------------------------------------------------------------------- */
+/* col-md-6 */
+.col-md-5 {
+    height: 100vh;
+    background-color: #0000003b;
+    border: 3px solid rgb(234, 255, 0);
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 0;
+}
+
+/* contenedor para hacer publicaciones */
+.container-style-main-perfil {
+    top: 0px;
+    width: 100%;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.167);
+    border-radius: 20px;
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.container-usuario-publicar-perfil {
+    padding: 15px 15px 15px;
+    display: flex;
+}
+
+.container-usuario-publicar-perfil a {
+    /* border: 3px solid rgb(255, 255, 255); */
+    height: 53px;
+}
+
+/* Imagen de perfil en la seccion para publicar  */
+.container-usuario-publicar-perfil .image-border-perfil {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%; 
+    object-fit: cover; /* Escala la imagen manteniendo las proporciones */
+}
+
+.container-usuario-publicar-perfil .form-publicar-perfil {
+    left: 60px;
+    width: 100%;
+    /* border: 2px solid white; */
+}
+
+.form-publicar-perfil .published-perfil {
+    width: 100%;
+    height: 100px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font: bold;
+    padding: 8px;
+    border-radius: 15px;
+    resize: none;
+}
+
+.form-publicar-perfil .image-upload-file {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-upload-file .image-public-perfil {
+    position: absolute; 
+}
+
+.image-upload-file .btn-subirFoto-perfil {
+    padding: 5px 10px;
+    background-color: white;
+    border: none;
+    font-size: 17px;
+    font: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.image-upload-file .btn-subirFoto-perfil:hover {
+    background-color: #cfcfcf;
+}
+
+.input-file input[type="file"] {
+    display: none;
+}
+
+.image-upload-file .btn-publi3 {
+    padding: 5px 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-size: 17px;
+    font: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.image-upload-file .btn-publi3:hover {
+    background-color: #cfcfcf;
+}
+
+.col-md-2 {
+    border: 2px solid white;
+}
+
+
+
+
+
