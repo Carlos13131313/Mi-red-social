@@ -1,5 +1,5 @@
 # Mi-red-social
-Testeo de codigo y diseño UI/UX y coneccion de base de datos.
+Testeo de codigo y diseño UI/UX y coneccion de base de datos en entorno LAMP.
 
 Concepto de una red social cuyo fin central es publicar audios entre amigos.
 
