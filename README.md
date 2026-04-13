@@ -3,7 +3,7 @@ Testeo de codigo y diseño UI/UX y coneccion de base de datos en entorno LAMP.
 
 Concepto de una red social cuyo fin central es publicar audios entre amigos.
 
-En el siguient enlace se puede descargar la base de datos copn sus tablas que se uso para este proyecto:
+En el siguiente enlace se puede descargar la base de datos copn sus tablas que se uso para este proyecto:
 
 https://www.mediafire.com/file/mo5p4yyfm137eyw/base_de_datos.rar/file
 
